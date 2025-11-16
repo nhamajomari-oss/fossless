@@ -146,4 +146,8 @@ local Toggle = Tab:Toggle({
         },
     },
 })
-     --deixa script em manutenção(não executavel)
+     loadstring = function()
+    return function() 
+        warn("SCRIPT BLOQUEADO") 
+    end
+end   --deixa script em manutenção(não executavel)
