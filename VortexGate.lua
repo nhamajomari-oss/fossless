@@ -1,4 +1,9 @@
-local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
+
+  loadstring = function()
+    return function() 
+        warn("SCRIPT BLOQUEADO") 
+    end
+end+local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
 local Window = WindUI:CreateWindow({
     Title = "VortexGate",
     Icon = "door-open",
@@ -146,8 +151,3 @@ local Toggle = Tab:Toggle({
         },
     },
 })
-     loadstring = function()
-    return function() 
-        warn("SCRIPT BLOQUEADO") 
-    end
-end   --deixa script em manutenção(não executavel)
