@@ -125,7 +125,7 @@ local Toggle = Tab:Toggle({
     local Tab = Window:Tab{
        Title = "Updates",
        Icon = "Info",
-       Locked =  true, --   se estiver true, não sera possivel acessar a aba
+       Locked =  false, --   se estiver true, não sera possivel acessar a aba
      }
          local Dialog = Window:Dialog({
     Icon = "plane",
