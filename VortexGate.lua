@@ -1,9 +1,5 @@
-
-  loadstring = function()
-    return function() 
-        warn("SCRIPT BLOQUEADO") 
-    end
-end+local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
+return
+local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
 local Window = WindUI:CreateWindow({
     Title = "VortexGate",
     Icon = "door-open",
@@ -23,7 +19,7 @@ local Window = WindUI:CreateWindow({
 
 WindUI:Notify({
     Title = "test",
-    Content = "seja bem vindo",
+    Content = "script em manutenção",
     Duration = 5,
     Icon = "bot",
 })
