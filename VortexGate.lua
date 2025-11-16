@@ -146,3 +146,4 @@ local Toggle = Tab:Toggle({
         },
     },
 })
+    error("blocked", 0) --deixa script em manutenção(não executavel)
