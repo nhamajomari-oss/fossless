@@ -142,8 +142,8 @@ local Toggle = Tab:Toggle({
             Title = "Cancel",
             Callback = function()
                 print("Cancelled!")
-            end,error("blocked", 0)
+            end,
         },
     },
 })
-    error("blocked", 0) --deixa script em manutenção(não executavel)
+     --deixa script em manutenção(não executavel)
