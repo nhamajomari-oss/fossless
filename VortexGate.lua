@@ -1,10 +1,11 @@
-return
 local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
 local Window = WindUI:CreateWindow({
     Title = "VortexGate",
-    Icon = "door-open",
-    Author = "by saintss",
+    Icon = "door-open", -- lucide icon
+    Author = "by Vortex",
     Folder = "VortexGate",
+    
+    -- ↓ This all is Optional. You can remove it.
     Size = UDim2.fromOffset(580, 460),
     MinSize = Vector2.new(560, 350),
     MaxSize = Vector2.new(850, 560),
@@ -15,6 +16,47 @@ local Window = WindUI:CreateWindow({
     BackgroundImageTransparency = 0.42,
     HideSearchBar = true,
     ScrollBarEnabled = false,
+    
+    -- ↓ Optional. You can remove it.
+    --[[ You can set 'rbxassetid://' or video to Background.
+        'rbxassetid://':
+            Background = "rbxassetid://", -- rbxassetid
+        Video:
+            Background = "video:YOUR-RAW-LINK-TO-VIDEO.webm", -- video 
+    --]]
+    
+    -- ↓ Optional. You can remove it.
+    User = {
+        Enabled = true,
+        Anonymous = false,
+        Callback = function()
+            print("clicked")
+        end,
+    },
+    
+    --       remove this all, 
+    -- !  ↓  if you DON'T need the key system
+    KeySystem = { 
+        -- ↓ Optional. You can remove it.
+        Key = { "Darkness", "darkness" },
+        
+        Note = "clica em get key.",
+        
+        -- ↓ Optional. You can remove it.
+        Thumbnail = {
+            Image = "rbxassetid://",
+            Title = "key não permanente",
+        },
+        
+        -- ↓ Optional. You can remove it.
+        URL = "https://link-target.net/1390959/yXbxX7iINych)",
+        
+        -- ↓ Optional. You can remove it.
+        SaveKey = false, -- automatically save and load the key.
+        
+        -- ↓ Optional. You can remove it.
+        -- API = {} ← Services. Read about it below ↓
+    },
 })
 
 WindUI:Notify({
@@ -36,16 +78,15 @@ local Tab = Window:Tab({
     Locked = false,
 })
 
-local Toggle = Tab:Toggle({
-    Title = "Aimbot",
-    Desc = "ativar o aimbot",
-    Icon = "target",
-    Type = "Checkbox",
-    Value = false,
-    Callback = function(state)
-        print("Toggle Activated" .. tostring(state))
+ local Button = Tab:Button{
+    Title = "test",
+    Desc = "test",
+    Icon = "bot",
+     Locked = false,
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/sl1yyypixel/Synx-Scripts-Universal-Aimbot/main/synx_universal.lua"))()
     end
-})
+}
 
 
 --------------------------------------------------------
@@ -122,12 +163,35 @@ local Toggle = Tab:Toggle({
     end
 })
 
-         --ABA PARA UPDATES DE SCRIPTS
+      local Toggle = Tab:Toggle({
+    Title = "esp line",
+    Desc = "não foi feito",
+    Icon = "line",
+    Type = "Checkbox",
+    Value = false, -- default value
+    Callback = function(state) 
+         -- meta o esp linha aqui
+            print("Toggle Activated" .. tostring(state))
+    end
+})   
+          Window:Divider()
+        
+             --ABA PARA configurações do player
     local Tab = Window:Tab{
-       Title = "Updates",
-       Icon = "Info",
+       Title = "player",
+       Icon = "ray",
        Locked =  false, --   se estiver true, não sera possivel acessar a aba
      }
+       local Section = Tab:Section({ 
+    Title = "Section",
+    Box = false,
+    FontWeight = "SemiBold",
+    TextTransparency = 0.05,
+    TextXAlignment = "Left",
+    TextSize = 17, -- Default Size
+    Opened = true,
+})
+
          local Dialog = Window:Dialog({
     Icon = "plane",
     Title = "o script esta em manutenção(beta) e pode conter falhas e funções não funcionais",
@@ -146,4 +210,4 @@ local Toggle = Tab:Toggle({
             end,
         },
     },
-})
+})   
