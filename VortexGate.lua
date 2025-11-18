@@ -179,7 +179,7 @@ local Toggle = Tab:Toggle({
              --ABA PARA configurações do player
     local Tab = Window:Tab{
        Title = "player",
-       Icon = "ray",
+       Icon = "anchor",
        Locked =  false, --   se estiver true, não sera possivel acessar a aba
      }
        local Section = Tab:Section({ 
