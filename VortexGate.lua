@@ -79,9 +79,9 @@ local Tab = Window:Tab({
 })
 
  local Button = Tab:Button{
-    Title = "test",
-    Desc = "test",
-    Icon = "bot",
+    Title = "aimbot",
+    Desc = "script",
+    Icon = "bomb",
      Locked = false,
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/sl1yyypixel/Synx-Scripts-Universal-Aimbot/main/synx_universal.lua"))()
@@ -184,7 +184,7 @@ local Toggle = Tab:Toggle({
      }
        local Section = Tab:Section({ 
     Title = "Section",
-    Box = false,
+    Box = true,
     FontWeight = "SemiBold",
     TextTransparency = 0.05,
     TextXAlignment = "Left",
@@ -194,7 +194,7 @@ local Toggle = Tab:Toggle({
 
          local Dialog = Window:Dialog({
     Icon = "plane",
-    Title = "o script esta em manutenção(beta) e pode conter falhas e funções não funcionais",
+    Title = "o nosso script esta quase pronto",
     Content = "test",
     Buttons = {
         {
