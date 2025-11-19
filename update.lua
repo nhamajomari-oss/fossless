@@ -3,10 +3,10 @@
 --===============================
 local TITLE_TEXT = "Updates do Script"
 local INFO_TEXT = [[
-v1.0 - Script criado
-v1.1 - UI adicionada
-v1.2 - Correções de bugs
-v1.3 - Sistema otimizado
+v1.0 - Main atualizado
+v1.1 - Novo obsfucator
+v1.2 - novo codigo de execução 
+v1.3 - sistema key perm implementado
 ]]
 
 --===============================
