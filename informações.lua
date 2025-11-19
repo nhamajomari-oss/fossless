@@ -2,9 +2,7 @@
 --  UI DE INFORMAÇÕES (ARRASTÁVEL + BOTÃO FECHAR + TAG AO LADO DO TÍTULO)
 --========================================================
 
-local INFO_TEXTO = [[
-METE AS INFORMAÇÕES AQUI
-]]
+local INFO_TEXTO = [[ola, nos a equipa vortex estamos decidindo a data para lançamento do script e pedimos que tenham paciência]]
 
 ----------------------------------------------------------
 
@@ -61,7 +59,7 @@ VersionLabel.Parent = TagFrame
 VersionLabel.Size = UDim2.new(1, -30, 1, 0)
 VersionLabel.Position = UDim2.new(0, 25, 0, 0)
 VersionLabel.BackgroundTransparency = 1
-VersionLabel.Text = "v1.6.6"
+VersionLabel.Text = "v1.0"
 VersionLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 VersionLabel.TextSize = 16
 VersionLabel.Font = Enum.Font.Gotham
