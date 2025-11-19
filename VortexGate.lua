@@ -61,7 +61,7 @@ local Window = WindUI:CreateWindow({
 
 WindUI:Notify({
     Title = "test",
-    Content = "script em manutenção",
+    Content = "atualizaremos as versões pelo git hub",
     Duration = 5,
     Icon = "bot",
 })
@@ -133,7 +133,6 @@ end
 -- AQUI O TOGGLE DO ESP 🔥🔥🔥🔥🔥
 local Toggle = Tab:Toggle({
     Title = "esp players",
-    Desc = "ative o esp",
     Icon = "bird",
     Type = "Checkbox",
     Value = false,
@@ -174,7 +173,18 @@ local Toggle = Tab:Toggle({
             print("Toggle Activated" .. tostring(state))
     end
 })   
-          Window:Divider()
+    
+   local Toggle = Tab:Toggle({
+    Title = "esp cham",
+    Desc = "não foi feito",
+    Icon = "lasso",
+    Type = "Checkbox",
+    Value = false, -- default value
+    Callback = function(state) 
+        print("Toggle Activated" .. tostring(state))
+    end
+})
+           Window:Divider()
         
              --ABA PARA configurações do player
     local Tab = Window:Tab{
@@ -182,17 +192,19 @@ local Toggle = Tab:Toggle({
        Icon = "anchor",
        Locked =  false, --   se estiver true, não sera possivel acessar a aba
      }
-       local Section = Tab:Section({ 
-    Title = "Section",
-    Box = true,
-    FontWeight = "SemiBold",
-    TextTransparency = 0.05,
-    TextXAlignment = "Left",
-    TextSize = 17, -- Default Size
-    Opened = true,
-})
-
-         local Dialog = Window:Dialog({
+      
+local Toggle = Tab:Toggle({
+    Title = "speed",
+    Desc = "não foi feito",
+    Icon = "zap",
+    Type = "Checkbox",
+    Value = false, -- default value
+    Callback = function(state) 
+        -- meta o speed aqui
+            print("Toggle Activated" .. tostring(state))
+    end
+})  
+      local Dialog = Window:Dialog({
     Icon = "plane",
     Title = "o nosso script esta quase pronto",
     Content = "test",
@@ -211,3 +223,26 @@ local Toggle = Tab:Toggle({
         },
     },
 })   
+
+      local Tab = Window:Tab({
+    Title = "script",
+    Icon = "book-open", -- optional
+    Locked = false,
+}) 
+     local Button = Tab:Button({
+    Title = "Button",
+    Desc = "Test Button",
+    Locked = false,
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/nhamajomari-oss/fossless/refs/heads/main/update.lua", true))()
+    end
+}) 
+      local Button = Tab:Button({
+    Title = "informações",
+    Desc = "abrir a aba de inf",
+    Locked = false,
+    Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/nhamajomari-oss/fossless/refs/heads/main/informa%C3%A7%C3%B5es.lua", true))()
+    end
+})
+
