@@ -1,3 +1,4 @@
+return
 local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/Library-ui/refs/heads/main/Redzhubui"))()
       local Window = redzlib:MakeWindow({
   Title = "👑 King hub 👑 : Brookhaven Rp",
