@@ -1,24 +1,3 @@
--- Lista de UserIds permitidos
-local Permitidos = {
-    ["4613540861"] = true,
-    ["2"] = true,
-    ["3"] = true,
-    ["4"] = true,
-    ["5"] = true,
-    ["6"] = true,
-}
-
-local player = game.Players.LocalPlayer
-local userId = tostring(player.UserId)
-
--- Verificar permissão
-if not Permitidos[userId] then
-    warn("Este jogador não tem permissão para usar o script.")
-    return  -- PARA o script aqui mesmo
-end
-
-print("Permissão concedida! Abrindo UI...")
-
 local redzlib=loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/Library-ui/refs/heads/main/Redzhubui"))()local Window=redzlib:MakeWindow({Title="👑 King hub 👑 | Brookhaven RP 🏡",SubTitle="By GOAT7ᵀᴹ",SaveFolder="testando Kakah Hub"})Window:AddMinimizeButton({
     Button = { Image = "rbxassetid://129263597164551", BackgroundTransparency = 0 },
     Corner = { CornerRadius = UDim.new(35, 1) },
