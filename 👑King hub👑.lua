@@ -14,7 +14,7 @@ local redzlib=loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143
       {"Confirm", function()
         
       end},
-      {"Maybe", function()
+      {"Ok", function()
         
       end},
       {"Cancel", function()
