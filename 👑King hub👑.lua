@@ -104,4 +104,4 @@ local redzlib=loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143
       end}
     }
   })
-      redzlib:SetTheme("Purple")      
+      
