@@ -12,7 +12,7 @@ local LocalPlayer = Players.LocalPlayer
 -- LISTA DE USUÁRIOS AUTORIZADOS (Substitua os números pelos IDs reais!)
 local AuthorizedUsers = {
     [4613540861] = true,
-    [98765432] = true,
+    [4381751006] = true,
 }
 
 if not AuthorizedUsers[LocalPlayer.UserId] then
