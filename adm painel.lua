@@ -11,7 +11,7 @@ local LocalPlayer = Players.LocalPlayer
 
 -- LISTA DE USUÁRIOS AUTORIZADOS (Substitua os números pelos IDs reais!)
 local AuthorizedUsers = {
-    [12345678] = true,
+    [4613540861] = true,
     [98765432] = true,
 }
 
