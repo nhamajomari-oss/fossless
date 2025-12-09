@@ -14,6 +14,7 @@ local AuthorizedUsers = {
     [4613540861] = true,
     [4381751006] = true,
     [8198722012] = true,
+    [2582395184] = true,
 }
 
 if not AuthorizedUsers[LocalPlayer.UserId] then
