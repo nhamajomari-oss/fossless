@@ -1,4 +1,4 @@
-Local TweenService = game:GetService("TweenService");
+local TweenService = game:GetService("TweenService");
 local Players = game:GetService("Players");
 local Debris = game:GetService("Debris");
 
