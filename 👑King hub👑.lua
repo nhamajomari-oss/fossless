@@ -1,8 +1,8 @@
-local TweenService = game:GetService("TweenService");
-local Players = game:GetService("Players");
-local Debris = game:GetService("Debris");
+local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+local Debris = game:GetService("Debris")
 
-local CoreGui = (gethui and gethui()) or game:GetService("CoreGui");
+local CoreGui = (gethui and gethui()) or game:GetService("CoreGui")
 
 if CoreGui:FindFirstChild("sp-warning") then
 	CoreGui["sp-warning"]:Destroy()
@@ -16,7 +16,7 @@ Debris:AddItem(ScreenGui, 25)
 local Background = Instance.new("Frame", ScreenGui)
 Background.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Background.Size = UDim2.fromScale(1, 1)
-	
+
 local Gradient = Instance.new("UIGradient", Background)
 Gradient.Rotation = 90
 Gradient.Color = ColorSequence.new({
@@ -25,7 +25,7 @@ Gradient.Color = ColorSequence.new({
 })
 
 local Center = Instance.new("Frame", Background)
-Center.Size = UDim2.fromScale(0.25, 0.09);
+Center.Size = UDim2.fromScale(0.25, 0.09)
 Center.AnchorPoint = Vector2.new(0.5, 1)
 Center.Position = UDim2.new(0.5, 0, 0.95, 0)
 Center.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
@@ -34,7 +34,7 @@ local Corner = Instance.new("UICorner", Center)
 Corner.CornerRadius = UDim.new(0, 8)
 
 local ServerLink = "https://discord.gg/dRSfju82T"
-local WarnMessage = "o nosso script caiu juntamente com o painel de adm\entre no discord para mais informações!"
+local WarnMessage = "o nosso script caiu juntamente com o painel de adm\nentre no discord para mais informações!"
 
 local Warn = Instance.new("TextLabel", Background)
 Warn.Text = WarnMessage
@@ -72,7 +72,7 @@ CloseButton.Position = UDim2.fromScale(0.29, 0.99)
 CloseButton.AnchorPoint = Vector2.new(1, 1)
 CloseButton.Text = "Close"
 CloseButton.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
-CloseButton.TextColor3 = Color3.fromRGB(255, 0, 0) -- Alterado para VERMELHO
+CloseButton.TextColor3 = Color3.fromRGB(255, 0, 0)
 CloseButton.Font = Enum.Font.FredokaOne
 CloseButton.TextScaled = true
 CloseButton.TextTransparency = 0.6
