@@ -1,3 +1,8 @@
+ local link = "https://discord.gg/dRSfju82T"
+
+if setclipboard then
+	setclipboard(link)
+end
 local player = game:GetService("Players").LocalPlayer
 
 player:Kick("nosso script caiu.")
