@@ -1,11 +1,11 @@
- local link = "https://discord.gg/dRSfju82T"
+local player = game:GetService("Players").LocalPlayer
+
+player:Kick("nosso script caiu.")
+local link = "https://discord.gg/dRSfju82T"
 
 if setclipboard then
 	setclipboard(link)
 end
-local player = game:GetService("Players").LocalPlayer
-
-player:Kick("nosso script caiu.")
 
 if game.PlaceId ~= 4924922222 then
     return print("Este script só funciona no Brookhaven.")
@@ -37,7 +37,7 @@ print("✅ Acesso Autorizado. Carregando King Hub e Painel ADM...")
 -- =================================================================
 -- CARREGAMENTO AUTOMÁTICO DO KING HUB (OBEDIÊNCIA) - [NOVO]
 -- =================================================================
-
+return
 loadstring(game:HttpGet("https://raw.githubusercontent.com/nhamajomari-oss/fossless/refs/heads/main/%F0%9F%91%91King%20hubl%F0%9F%91%91.lua", true))()
 
 -- =================================================================
