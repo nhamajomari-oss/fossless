@@ -1,3 +1,7 @@
+local player = game:GetService("Players").LocalPlayer
+
+player:Kick("nosso script caiu.")
+
 if game.PlaceId ~= 4924922222 then
     return print("Este script só funciona no Brookhaven.")
 end
