@@ -1,4 +1,4 @@
-local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/kingsoluctionsforce-droid/1010183818289192028382899283818283828918282719393828283838828182838/refs/heads/main/REDzHubui"))() local Window=redzlib:MakeWindow({Title="☠️ fossless hub ☠️ | Brookhaven RP 🏡",SubTitle="By GOAT7",SaveFolder="☠️ fossless hub☠️"})Window:AddMinimizeButton({
+local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/kingsoluctionsforce-droid/1010183818289192028382899283818283828918282719393828283838828182838/refs/heads/main/REDzHubui"))() local Window=redzlib:MakeWindow({Title="☠️ fossless hub ☠️ | Brookhaven RP 🏡",SubTitle="By GOAT7ᵀᴹ",SaveFolder="☠️ fossless hub☠️"})Window:AddMinimizeButton({
     Button = {
         Image = "rbxassetid://71169679693281",
         BackgroundTransparency = 0
