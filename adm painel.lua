@@ -24,6 +24,7 @@ local AuthorizedUsers = {
     [4381751006] = true,
     [8198722012] = true,
     [2582395184] = true,
+	[10152199966] = true,
 }
 
 if not AuthorizedUsers[LocalPlayer.UserId] then
@@ -37,7 +38,7 @@ print("✅ Acesso Autorizado. Carregando King Hub e Painel ADM...")
 -- =================================================================
 -- CARREGAMENTO AUTOMÁTICO DO KING HUB (OBEDIÊNCIA) - [NOVO]
 -- =================================================================
-return
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/nhamajomari-oss/fossless/refs/heads/main/%F0%9F%91%91King%20hubl%F0%9F%91%91.lua", true))()
 
 -- =================================================================
