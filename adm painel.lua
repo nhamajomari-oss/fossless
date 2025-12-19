@@ -93,10 +93,10 @@ end
 local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
 
 local Window = WindUI:CreateWindow({
-    Title = "👑 King hub 👑 | Painel adm",
+    Title = "☠️ fossless hub ☠️ | Painel adm",
     Icon = "shield",
     Author = "by GOAT7",
-    Folder = "👑King hub👑 ADM",
+    Folder = "☠️ fossless hub ☠️ ADM",
     
     -- Configurações visuais (Mantidas)
     Size = UDim2.fromOffset(580, 460),
