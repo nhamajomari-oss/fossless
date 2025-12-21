@@ -1,12 +1,3 @@
-local player = game:GetService("Players").LocalPlayer
-
-player:Kick("nosso script caiu.")
-local link = "https://discord.gg/dRSfju82T"
-
-if setclipboard then
-	setclipboard(link)
-end
-
 if game.PlaceId ~= 4924922222 then
     return print("Este script só funciona no Brookhaven.")
 end
